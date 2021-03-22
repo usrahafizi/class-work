@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let houses =[
+        {
+            id:1,
+            locatoin:"kabul",
+            room:2,
+            guest:5
+        },
+        {
+            id:2,
+            locatoin:"london",
+            room:2,
+            guest:6
+        },
+        {
+            id:3,
+            locatoin:"kabul",
+            room:4,
+            guest:15
+        },
+        {
+            id:5,
+            locatoin:"izmir",
+            room:5,
+            guest:25
+        }
+        ];
+        let availableHotels = [];
+        function searchLocation(city) {
+            for(let x=0;x<houses.length;x++){
+                if(city === houses[x].locatoin){
+                    availableHotels.push(houses[x].id);
+                }
+            }
+        }
+        // show ==
+        for (let hotel in availableHotels){
+            document.write(availableHotels[hotel]);
+        }
+    </script>
+</body>
+</html>
